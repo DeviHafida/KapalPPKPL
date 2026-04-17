@@ -10,7 +10,20 @@
                     <h1 class="h5 mb-0">Form Input Ultrasonic Test</h1>
                 </div>
                 <div class="card-body">
-                    <p class="text-muted mb-4">ID Inspeksi: <strong>{{ $idInspeksi }}</strong></p>
+                    <div class="row mb-4 pb-3 border-bottom">
+                        <div class="col-md-6">
+                            <p class="mb-1"><small class="text-muted">ID Inspeksi</small></p>
+                            <p class="mb-0"><strong>{{ $idInspeksi }}</strong></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="mb-1"><small class="text-muted">Jenis Kapal</small></p>
+                            <p class="mb-0"><strong>{{ $shipType }}</strong></p>
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <p class="mb-1"><small class="text-muted">Area Kapal</small></p>
+                            <p class="mb-0"><strong>{{ $shipArea }}</strong></p>
+                        </div>
+                    </div>
 
                     @if (session('success'))
                         <div class="alert alert-success">{{ session('success') }}</div>
@@ -109,6 +122,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-primary">Simpan Data</button>
+                        <a href="{{ route('home') }}" class="btn btn-secondary">Kembali</a>
                     </form>
                 </div>
             </div>
